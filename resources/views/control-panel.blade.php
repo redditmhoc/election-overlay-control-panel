@@ -37,6 +37,14 @@
                 </li>
             @endforeach
         </ol>
+        <hr>
+        <h5>Ticker lines</h5>
+        <form action="{{ route('update-ticker-lines') }}" method="post">
+            @csrf
+            <input type="text" class="form-control w-full" name="lines" value="{{ $lines }}">
+            <button type="submit" class="btn btn-primary btn-sm">Save</button>
+        </form>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>
