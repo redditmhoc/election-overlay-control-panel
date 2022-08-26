@@ -44,7 +44,8 @@
             <input type="text" class="form-control w-full" name="lines" value="{{ $lines }}">
             <button type="submit" class="btn btn-primary btn-sm">Save</button>
         </form>
-
+        <hr>
+        <a href="{{ route('toggle-bars') }}" class="btn-btn-primary">Toggle bars</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>

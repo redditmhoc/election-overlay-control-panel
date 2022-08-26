@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('groupings', [\App\Http\Controllers\Api\ApiController::class, 'getGroupings']);
 
 Route::get('ticker-lines', [\App\Http\Controllers\Api\ApiController::class, 'getTickerLines']);
+
+Route::get('show-bars', [\App\Http\Controllers\Api\ApiController::class, 'getShowBars']);

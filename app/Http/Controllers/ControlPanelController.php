@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Grouping;
+use App\Models\Settings;
 use App\Models\TickerLine;
 use Illuminate\Http\Request;
 
@@ -40,5 +41,14 @@ class ControlPanelController extends Controller
 
         return redirect()->to('/');
 
+    }
+
+    public function toggleBars()
+    {
+        $settings = Settings::all()->first();
+        $settings->show_bars = !$settings->show_bars;
+        $settings->save();
+
+        return redirect()->to('/');
     }
 }

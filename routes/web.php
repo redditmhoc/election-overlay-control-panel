@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\ControlPanelController::class, 'index']);
 Route::post('/ticker-lines/update', [\App\Http\Controllers\ControlPanelController::class, 'updateTickerLines'])->name('update-ticker-lines');
+Route::get('/toggle-bars', [\App\Http\Controllers\ControlPanelController::class, 'toggleBars'])->name('toggle-bars');
 Route::post('/{grouping}/update/', [\App\Http\Controllers\ControlPanelController::class, 'updateGrouping'])->name('update-grouping');
